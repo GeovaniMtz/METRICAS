@@ -43,9 +43,8 @@ public class OperacionesConPuntos2D {
     }
 
 
-    public static double area(Punto2D a, Punto2D b) {
-        Punto2D per = new Punto2D((-1*a.getY()),a.getX());
-    Double ar = dotProduct(per,b);
-    return ar;  
+    public static double area(Punto2D a, Punto2D b){
+    Double paralelo = Math.abs(((a.getX()*b.getY())-(a.getY()*b.getX())));
+    return paralelo;
     }
 }
